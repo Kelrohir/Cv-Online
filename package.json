@@ -1,0 +1,30 @@
+{
+  "name": "cvonline",
+  "version": "0.0.1",
+  "description": "Création d'un site perso pour créer mes CV",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kelrohir/Cv-Online.git"
+  },
+  "keywords": [
+    "CV"
+  ],
+  "author": "Xavier Cobigo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kelrohir/Cv-Online/issues"
+  },
+  "homepage": "https://github.com/Kelrohir/Cv-Online#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "letsencrypt-express": "^2.0.6",
+    "mongoose": "^5.0.7",
+    "typescript": "^2.7.2"
+  }
+}
