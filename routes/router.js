@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var test = require('../Data/test.json');
+var CV = require('../schema/CvSchema');
 
 router.get('/', (req, res) => {
     res.status(200).send('hello');
@@ -15,11 +15,14 @@ router.get('/search/:search', (req, res) => {
     res.json(test[search]);
     res.send();
 })
-
 router.post('/add', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-    test.genre = req.body.genre;
-    console.log(test.genre);
+    var newCV = new CV();
+    newCV.firstname = req.body.genre;
+    console.log(newCV);
+    newCV.save(function(){
+        console.log('CV sauvegardé');
+    });
     res.sendStatus(200);
 }) 
 router.get('/404', (req, res) => {

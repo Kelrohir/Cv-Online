@@ -1,8 +1,8 @@
-import mongoose from 'mongoose'
+var mongoose = require('mongoose');
 
-var Schema = mongoose.Schemal;
+var Schema = mongoose.Schema;
 
-const proto = new Schema({
+const CvSchema = new Schema({
     firstname: String,
     lastname: String,
     description: String,
@@ -45,5 +45,7 @@ const proto = new Schema({
         label: String,
         description: String
     }]
+});
 
-})
+var CV = mongoose.model('curriculumvitaes', CvSchema);
+module.exports = CV;
